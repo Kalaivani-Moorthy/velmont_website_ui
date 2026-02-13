@@ -4,6 +4,10 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import AboutPage from './pages/AboutPage'
 import ServicesPage from './pages/ServicesPage'
+import DonatePage from './pages/DonatePage'
+import EventsPage from './pages/EventsPage'
+import PhotosPage from './pages/PhotosPage'
+import ContactPage from './pages/ContactPage'
 
 function App() {
   return (
@@ -14,10 +18,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/donate" element={<div className="pt-24 min-h-screen"><h1 className="text-center text-4xl py-20">Donate Page - Coming Soon</h1></div>} />
-          <Route path="/events" element={<div className="pt-24 min-h-screen"><h1 className="text-center text-4xl py-20">Events Page - Coming Soon</h1></div>} />
-          <Route path="/photos" element={<div className="pt-24 min-h-screen"><h1 className="text-center text-4xl py-20">Photos Page - Coming Soon</h1></div>} />
-          <Route path="/contact" element={<div className="pt-24 min-h-screen"><h1 className="text-center text-4xl py-20">Contact Page - Coming Soon</h1></div>} />
+          <Route path="/donate" element={<DonatePage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/photos" element={<PhotosPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </div>

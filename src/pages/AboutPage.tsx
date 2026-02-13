@@ -4,12 +4,22 @@ import { GiMeditation } from 'react-icons/gi'
 import heroImage from '../assets/hero.jpg'
 import pic2 from '../assets/pic2.jpg'
 import pic3 from '../assets/pic3.jpg'
-import pic4 from '../assets/pic4.jpg'
-import velImage from '../assets/vel.jpg'
+
+import pic8 from '../assets/pic8.jpg'
+import caro1 from '../assets/caro1.jpg'
+import caro2 from '../assets/caro2.png'
+import caro3 from '../assets/caro3.jpg'
+import caro4 from '../assets/caro4.jpg'
+import caro5 from '../assets/caro5.jpg'
+import caro6 from '../assets/caro6.jpg'
+import caro7 from '../assets/caro7.jpg'
+
 
 function AboutPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const carouselImages = [heroImage, pic2, pic3, pic4, velImage]
+  const carouselImages = [heroImage, pic3, caro1, caro2, caro3, caro4, caro5, caro6
+
+  ]
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,21 +48,23 @@ function AboutPage() {
   }, [])
 
   return (
-    <div>
+    <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-end overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={pic2} alt="Temple" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <img src={carouselImages[currentSlide]} alt="About VelMont" className="w-full h-full object-cover animate-[zoom_20s_ease-in-out_infinite]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/90 via-amber-600/80 to-orange-600/90"></div>
         </div>
-        <div className="relative w-full pb-24 px-6 z-10">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">About VelMont</h1>
-            <p className="text-2xl text-gray-200">Spiritual Center • Bay Area, California</p>
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+          <div className="inline-block mb-8 animate-float">
+            <FaOm className="text-8xl text-amber-300" />
           </div>
-        </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-          <FaChevronDown className="text-4xl text-white/80" />
+          <h1 className="text-8xl md:text-9xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-orange-300 to-amber-200 animate-gradient-shift" style={{backgroundSize: '200% auto'}}>
+            About VelMont
+          </h1>
+          <p className="text-3xl text-white/90 max-w-3xl mx-auto font-light">
+            Building bridges of hope through spiritual, cultural, and educational enrichment
+          </p>
         </div>
       </section>
 
@@ -62,7 +74,7 @@ function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="slide-in group">
               <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl">
-                <img src={pic2} alt="Temple Interior" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img src={caro7} alt="Temple Interior" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-orange-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </div>
@@ -88,8 +100,8 @@ function AboutPage() {
       {/* Vision Section - Full Width Background */}
       <section className="relative py-32">
         <div className="absolute inset-0">
-          <img src={velImage} alt="Vision" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-900/95 via-red-900/90 to-amber-900/95"></div>
+          <img src={pic8} alt="Vision" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-900/30 via-red-900/60 to-amber-900/45"></div>
         </div>
         <div className="relative max-w-6xl mx-auto px-6 text-center text-white">
           <FaStar className="text-7xl mx-auto mb-8" />
@@ -171,7 +183,7 @@ function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="slide-in order-2 lg:order-1 group">
               <div className="relative h-[450px] rounded-3xl overflow-hidden shadow-2xl">
-                <img src={pic4} alt="Meditation" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img src={caro2} alt="Meditation" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent"></div>
               </div>
             </div>
@@ -203,7 +215,7 @@ function AboutPage() {
             </div>
             <div className="slide-in group">
               <div className="relative h-[450px] rounded-3xl overflow-hidden shadow-xl">
-                <img src={pic2} alt="Temple" className="w-full h-full object-cover" />
+                <img src={caro7} alt="Temple" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

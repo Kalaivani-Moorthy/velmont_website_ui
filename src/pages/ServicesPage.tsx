@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { FaChevronDown } from 'react-icons/fa'
+import { FaOm } from 'react-icons/fa'
+import { GiTempleGate } from 'react-icons/gi'
 import pic3 from '../assets/pic3.jpg'
 
 function ServicesPage() {
@@ -65,21 +66,23 @@ function ServicesPage() {
   ]
 
   return (
-    <div>
+    <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-end overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={pic3} alt="Temple Services" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+          <img src={pic3} alt="Temple Services" className="w-full h-full object-cover animate-[zoom_20s_ease-in-out_infinite]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/90 via-amber-600/80 to-orange-600/90"></div>
         </div>
-        <div className="relative w-full pb-24 px-6 z-10">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">Temple Services</h1>
-            <p className="text-2xl text-gray-200">Book poojas and receive divine blessings</p>
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+          <div className="inline-block mb-8 animate-float">
+            <GiTempleGate className="text-8xl text-amber-300" />
           </div>
-        </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-          <FaChevronDown className="text-4xl text-white/80" />
+          <h1 className="text-8xl md:text-9xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-orange-300 to-amber-200 animate-gradient-shift" style={{backgroundSize: '200% auto'}}>
+            Temple Services
+          </h1>
+          <p className="text-3xl text-white/90 max-w-3xl mx-auto font-light">
+            Book poojas and receive divine blessings for you and your loved ones
+          </p>
         </div>
       </section>
 
