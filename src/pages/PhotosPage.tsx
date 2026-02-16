@@ -12,6 +12,7 @@ import caro3 from '../assets/caro3.jpg'
 import caro4 from '../assets/caro4.jpg'
 import caro5 from '../assets/caro5.jpg'
 import caro6 from '../assets/caro6.jpg'
+import PageHeader from '../components/PageHeader'
 
 function PhotosPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -32,33 +33,22 @@ function PhotosPage() {
   ]
 
   return (
-    <div className="pt-20">
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroImage} alt="Gallery" className="w-full h-full object-cover animate-[zoom_20s_ease-in-out_infinite]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/90 via-amber-600/80 to-orange-600/90"></div>
-        </div>
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-          <div className="inline-block mb-8 animate-float">
-            <FaCamera className="text-8xl text-amber-300" />
-          </div>
-          <h1 className="text-8xl md:text-9xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-orange-300 to-amber-200 animate-gradient-shift" style={{backgroundSize: '200% auto'}}>
-            Photo Gallery
-          </h1>
-          <p className="text-3xl text-white/90 max-w-3xl mx-auto font-light">
-            Capturing sacred moments and divine celebrations
-          </p>
-        </div>
-      </section>
+    <div className="pt-20 bg-gradient-to-b from-amber-50 via-white to-orange-50">
+      <PageHeader
+        title="Photo Gallery"
+        subtitle="Capturing sacred moments and divine celebrations."
+        image={pic2}
+        Icon={FaCamera}
+      />
 
-      <section className="py-24 bg-gradient-to-br from-orange-50 via-white to-amber-50">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {photos.map((photo, i) => (
               <div
                 key={i}
                 onClick={() => setSelectedImage(photo.src)}
-                className="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer hover-lift"
+                className="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer border border-orange-100 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
                 <div className="aspect-square">
                   <img src={photo.src} alt={photo.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />

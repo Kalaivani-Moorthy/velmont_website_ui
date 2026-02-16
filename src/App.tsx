@@ -11,7 +11,7 @@ import ContactPage from './pages/ContactPage'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/velmont_website_ui">
       <div className="overflow-x-hidden">
         <Navbar />
         <Routes>
